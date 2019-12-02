@@ -84,6 +84,22 @@ public class Job {
         return id;
     }
 
+    public String toString(Object o){
+        return "\n Id: _____ \n";
+    }
+
+    @Override
+    public String toString() {
+        return "\n" +
+                "Id: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer +
+                "\nLocation: " + location +
+                "\nPosition Type: " + positionType +
+                "\nCore Competency: " + coreCompetency +
+                "\n";
+    }
+
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
