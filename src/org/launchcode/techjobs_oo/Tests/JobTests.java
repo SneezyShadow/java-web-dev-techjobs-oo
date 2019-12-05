@@ -30,18 +30,29 @@ public class JobTests {
         Assert.assertTrue(testJobs.toString().endsWith("\n"));
     }
     @Test
-    public void testForFormating(){
+    public void testForFormatting(){
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        System.out.println(testJob);
         Assert.assertTrue(testJob.toString().equals("\n" +
-                "Id: " + testJob.getId() +
-                "\nName: " + testJob.getName() +
-                "\nEmployer: " + testJob.getEmployer() +
-                "\nLocation: " + testJob.getLocation() +
-                "\nPosition Type: " + testJob.getPositionType() +
-                "\nCore Competency: " + testJob.getCoreCompetency() +
+                "Id: " + "1" +
+                "\nName: " + "Product tester" +
+                "\nEmployer: " + "ACME" +
+                "\nLocation: " + "Desert" +
+                "\nPosition Type: " + "Quality control" +
+                "\nCore Competency: " + "Persistence" +
                 "\n"));
     }
-
-
+    @Test
+    public void testForDataNotAvailable(){
+        Job testJob = new Job();
+        Assert.assertTrue(testJob.toString().equals("\n" +
+                "Id: " + testJob.getId() +
+                "\nName: " + "Data Not Available" +
+                "\nEmployer: " + "Data Not Available" +
+                "\nLocation: " + "Data Not Available" +
+                "\nPosition Type: " + "Data Not Available" +
+                "\nCore Competency: " + "Data Not Available" +
+                "\n"));
+    }
 
 }

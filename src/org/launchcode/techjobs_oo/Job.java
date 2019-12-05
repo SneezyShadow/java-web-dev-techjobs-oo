@@ -83,21 +83,25 @@ public class Job {
     public int hashCode() {
         return id;
     }
-
-    public String toString(Object o){
-        return "\n Id: _____ \n";
+    public String toString(Object Job){
+        return "\nId: "+this.getId()+"\n";
     }
+
+
 
     @Override
     public String toString() {
-        return "\n" +
-                "Id: " + id +
-                "\nName: " + name +
-                "\nEmployer: " + employer +
-                "\nLocation: " + location +
-                "\nPosition Type: " + positionType +
-                "\nCore Competency: " + coreCompetency +
+
+        String x = "\n" +
+                "Id: " + this.id +
+                "\nName: " + this.name +
+                "\nEmployer: " + this.employer +
+                "\nLocation: " + this.location +
+                "\nPosition Type: " + this.positionType +
+                "\nCore Competency: " + this.coreCompetency +
                 "\n";
+        String y = x.replaceAll("null", "Data Not Available");
+        return y;
     }
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
